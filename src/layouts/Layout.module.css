@@ -7,7 +7,9 @@
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 12px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .container .image img  {
@@ -145,7 +147,7 @@
 @media (max-width: 930px) {
     .container {
         justify-content: space-between;
-        padding: 10px;
+        padding: 10px 30px;
     }
 }
 

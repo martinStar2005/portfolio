@@ -1,10 +1,13 @@
+import Banner from "./components/banner"
 import Layout from "./layouts/layout"
 
 function App() {
  
 
   return (
-    <Layout></Layout>
+    <Layout>
+      <Banner />
+    </Layout>
   )
 }
 
