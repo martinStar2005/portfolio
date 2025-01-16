@@ -1,20 +1,24 @@
 import { AiFillHome, AiOutlineProject } from "react-icons/ai";
 import img from "../assets/navbarImg.png"
 import styles from "./Layout.module.css"
-import { FaBlog, FaUser } from "react-icons/fa";
+import { FaArrowCircleUp, FaBlog, FaUser } from "react-icons/fa";
 import { MdFiberManualRecord, MdOutlineContactMail, MdPunchClock } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 import { useEffect, useRef, useState } from "react";
-import { FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { FaArrowUp, FaArrowUpLong, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { GrGithub } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { BiArrowToTop } from "react-icons/bi";
+import { RiArrowRightUpBoxLine } from "react-icons/ri";
 
 
 
 export default function Layout({children}) {
     const [isOpen, setIsOpen] = useState(false)
     const menuRef =useRef(null)
+    const [isVisible, setIsvisible] = useState(false)
+
     const hamburgerMenuHandler = () => {
         setIsOpen(!isOpen)
     }
@@ -31,6 +35,29 @@ export default function Layout({children}) {
             document.removeEventListener("mousedown", handleClickOutside)
         }
     }, [])
+
+    useEffect(() => {
+        const toggleVisiblity = () => {
+            if (window.scrollY > 200) {
+                setIsvisible(true)
+            } else {
+                setIsvisible(false)
+            }
+        }
+
+        window.addEventListener("scroll" , toggleVisiblity)
+
+        return () => {
+            window.removeEventListener("scroll" , toggleVisiblity)
+        }
+    }, [])
+
+    const mustScrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        })
+    }
 
     return(
         <>
@@ -59,6 +86,9 @@ export default function Layout({children}) {
                 </div>
             </nav>
             {children}
+            {isVisible && (
+                <button className={styles.scrollToTop} onClick={mustScrollToTop}><FaArrowCircleUp fontSize="1.5rem" /></button>
+            )}
             <footer className={styles.footer}>
                 <div>
                     <div className={styles.socialMedia}>
