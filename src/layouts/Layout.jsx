@@ -6,11 +6,9 @@ import { MdFiberManualRecord, MdOutlineContactMail, MdPunchClock } from "react-i
 import { RxHamburgerMenu } from "react-icons/rx";
 
 import { useEffect, useRef, useState } from "react";
-import { FaArrowUp, FaArrowUpLong, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { GrGithub } from "react-icons/gr";
 import { Link } from "react-router-dom";
-import { BiArrowToTop } from "react-icons/bi";
-import { RiArrowRightUpBoxLine } from "react-icons/ri";
 
 
 
@@ -59,6 +57,10 @@ export default function Layout({children}) {
         })
     }
 
+    const toggleHandler = () => {
+        setIsOpen(false)
+    }
+
     return(
         <>
             <nav className={styles.container}>
@@ -77,11 +79,11 @@ export default function Layout({children}) {
                 </div>
                 <div ref={menuRef} className={`${styles.hamburgerList} ${isOpen ? styles.open : ""}`}>
                     <p><span onClick={hamburgerMenuHandler}>X</span></p>
-                    <div><span><AiFillHome/></span> <p>Home</p></div>
-                    <div><span><FaUser /></span> <p>About Me</p></div>
-                    <div><span><AiOutlineProject/></span> <p>Portfolio</p></div>
-                    <div><span><FaBlog/></span> <p>Blog</p></div>
-                    <div><span><MdOutlineContactMail/></span> <p>Contact</p></div>
+                    <Link onClick={toggleHandler} to="/home"><div><span><AiFillHome/></span> <p>Home</p></div></Link>
+                    <Link onClick={toggleHandler} to="#"><div><span><FaUser /></span> <p>About Me</p></div></Link>
+                    <Link onClick={toggleHandler} to="#"><div><span><AiOutlineProject/></span> <p>Portfolio</p></div></Link>
+                    <Link onClick={toggleHandler} to="/blog"><div><span><FaBlog/></span> <p>Blog</p></div></Link>
+                    <Link onClick={toggleHandler} to=""><div><span><MdOutlineContactMail/></span> <p>Contact</p></div></Link>
                     
                 </div>
             </nav>
