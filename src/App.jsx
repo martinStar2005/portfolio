@@ -1,10 +1,17 @@
+import Banner from "./components/banner"
+import Layout from "./layouts/layout"
+import Animation from "./animations/Animation"
+
 function App() {
-  
+ 
 
   return (
-    <>
-      <p>portfolio</p>
-    </>
+    <Layout>
+        <Animation>
+        <Banner />
+    </Animation>
+      </Layout>
+
   )
 }
 

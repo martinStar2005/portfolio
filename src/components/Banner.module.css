@@ -1,0 +1,100 @@
+.banner {
+    width: 100%;
+    margin-top: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner img {
+    height: 370px;
+    width: 420px;
+    box-shadow: 0px 10px 20px rgba(
+        0, 0, 0, 0.25), 0px 6px 15px rgba(0, 0, 0, 0.22);
+        border-radius: 20px;
+}
+
+.banner >div {
+    width: 470px;
+    margin: 0 15px;
+}
+
+.banner > div h1 {
+    margin-bottom: 60px;
+    font-size: 2.2rem;
+    font-weight: 600;
+} 
+
+.banner div > p {
+    line-height: 2rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.banner a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+
+.banner a p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #000;
+    transition: all 0.3s blue;
+
+}
+
+.banner a p:hover {
+    color: rgb(48, 48, 238);
+
+}
+
+.icon {
+    line-height: 10px;
+    transform: translateX(-30px);
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.show {
+    transform: translateX(0);
+}
+
+@media (max-width: 930px) {
+    .banner {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .banner > div {
+        width: 420px;
+    }
+
+    .banner > div h1 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner img {
+        width: 370px;
+    }
+
+    .banner >div {
+        width: 375px;
+    }
+}
+
+@media (max-width: 400px) {
+    .banner img {
+        display: none;
+    }
+
+    .banner >div {
+        width: auto;
+    }
+}

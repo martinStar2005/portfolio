@@ -1,0 +1,80 @@
+.Portfolio {
+    margin-top: 155px;
+    width: 100%;
+    background-color: rgb(221, 221, 247);
+    padding: 30px ;
+    
+}
+
+.Portfolio > div {
+    border: 2px dashed grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.Portfolio > div svg {
+    margin-left: 15px;
+    font-size: 2rem;
+    color: blue;
+    
+}
+
+.Portfolio > div h1 {
+    margin-top: 30px;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.Portfolio > div > button {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    border: none;
+    background: rgb(135, 22, 255);
+    padding: 12px 60px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.Portfolio > div > button:hover {
+    color: rgb(135, 22, 255);
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+@media (max-width: 983px) {
+    
+    .Portfolio > div h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 812px) {
+    
+    .Portfolio > div h1 {
+        font-size: 1.4rem;
+    }
+
+    .Portfolio > div h1 svg {
+        font-size: 1.4rem;
+
+        
+    }
+}
+
+@media (max-width: 350px) {
+    
+    .Portfolio > div button {
+        font-size: 0.8rem;
+    }
+
+    
+}
