@@ -42,7 +42,7 @@ export default function Layout({children}) {
                     <Link to="/home"><AiFillHome color="black"/> <p>Home</p></Link>
                     <Link to="#"><FaUser color="black"/> <p>About Me</p></Link>
                     <Link to="#"><AiOutlineProject color="black"/> <p>Portfolio</p></Link>
-                    <Link to="#"><FaBlog color="black"/> <p>Blog</p></Link>
+                    <Link to="/blog"><FaBlog color="black"/> <p>Blog</p></Link>
                     <Link to="#"><MdOutlineContactMail color="black"/> <p>Contact</p></Link>
                 </div>
                 <div onClick={hamburgerMenuHandler} className={styles.hamburgerMenu}>
@@ -77,7 +77,7 @@ export default function Layout({children}) {
                         <Link to="/home"><MdFiberManualRecord />Home</Link>
                         <Link to="#"><MdFiberManualRecord />About Me</Link>
                         <Link to="#"><MdFiberManualRecord />Portfolio</Link>
-                        <Link to="#"><MdFiberManualRecord />Blog</Link>
+                        <Link to="/blog"><MdFiberManualRecord />Blog</Link>
                         <Link to="#"><MdFiberManualRecord />Contact</Link>
                     </div>
                 </div>
