@@ -8,6 +8,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useRef, useState } from "react";
 import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { GrGithub } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 
 
@@ -38,11 +39,11 @@ export default function Layout({children}) {
                     <img src={img} alt="navigation image" />
                 </div>
                 <div className={styles.queryTexts}>
-                    <a href="#"><AiFillHome color="black"/> <p>Home</p></a>
-                    <a href="#"><FaUser color="black"/> <p>About Me</p></a>
-                    <a href="#"><AiOutlineProject color="black"/> <p>Portfolio</p></a>
-                    <a href="#"><FaBlog color="black"/> <p>Blog</p></a>
-                    <a href="#"><MdOutlineContactMail color="black"/> <p>Contact</p></a>
+                    <Link to="/home"><AiFillHome color="black"/> <p>Home</p></Link>
+                    <Link to="#"><FaUser color="black"/> <p>About Me</p></Link>
+                    <Link to="#"><AiOutlineProject color="black"/> <p>Portfolio</p></Link>
+                    <Link to="#"><FaBlog color="black"/> <p>Blog</p></Link>
+                    <Link to="#"><MdOutlineContactMail color="black"/> <p>Contact</p></Link>
                 </div>
                 <div onClick={hamburgerMenuHandler} className={styles.hamburgerMenu}>
                     <RxHamburgerMenu/>
@@ -73,11 +74,11 @@ export default function Layout({children}) {
                     </div>
                     <div className={styles.component}>
                         <p>Website's components:</p>
-                        <a href="#"><MdFiberManualRecord />Home</a>
-                        <a href="#"><MdFiberManualRecord />About Me</a>
-                        <a href="#"><MdFiberManualRecord />Portfolio</a>
-                        <a href="#"><MdFiberManualRecord />Blog</a>
-                        <a href="#"><MdFiberManualRecord />Contact</a>
+                        <Link to="/home"><MdFiberManualRecord />Home</Link>
+                        <Link to="#"><MdFiberManualRecord />About Me</Link>
+                        <Link to="#"><MdFiberManualRecord />Portfolio</Link>
+                        <Link to="#"><MdFiberManualRecord />Blog</Link>
+                        <Link to="#"><MdFiberManualRecord />Contact</Link>
                     </div>
                 </div>
                 <p>Developed by Martin Larsen in 2025</p>
