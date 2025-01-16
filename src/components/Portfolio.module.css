@@ -29,7 +29,7 @@
     font-style: italic;
 }
 
-.Portfolio > div > button {
+.Portfolio > div > a > button {
     margin-top: 80px;
     margin-bottom: 50px;
     border: none;
@@ -44,7 +44,7 @@
     font-style: italic;
 }
 
-.Portfolio > div > button:hover {
+.Portfolio > div > a > button:hover {
     color: rgb(135, 22, 255);
     background-color: #fff;
     transform: scale(1.05);

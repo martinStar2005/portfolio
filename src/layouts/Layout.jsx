@@ -70,7 +70,7 @@ export default function Layout({children}) {
                 <div className={styles.queryTexts}>
                     <Link to="/home"><AiFillHome color="black"/> <p>Home</p></Link>
                     <Link to="#"><FaUser color="black"/> <p>About Me</p></Link>
-                    <Link to="#"><AiOutlineProject color="black"/> <p>Portfolio</p></Link>
+                    <Link to="/portfolio"><AiOutlineProject color="black"/> <p>Portfolio</p></Link>
                     <Link to="/blog"><FaBlog color="black"/> <p>Blog</p></Link>
                     <Link to="#"><MdOutlineContactMail color="black"/> <p>Contact</p></Link>
                 </div>
@@ -81,7 +81,7 @@ export default function Layout({children}) {
                     <p><span onClick={hamburgerMenuHandler}>X</span></p>
                     <Link onClick={toggleHandler} to="/home"><div><span><AiFillHome/></span> <p>Home</p></div></Link>
                     <Link onClick={toggleHandler} to="#"><div><span><FaUser /></span> <p>About Me</p></div></Link>
-                    <Link onClick={toggleHandler} to="#"><div><span><AiOutlineProject/></span> <p>Portfolio</p></div></Link>
+                    <Link onClick={toggleHandler} to="/portfolio"><div><span><AiOutlineProject/></span> <p>Portfolio</p></div></Link>
                     <Link onClick={toggleHandler} to="/blog"><div><span><FaBlog/></span> <p>Blog</p></div></Link>
                     <Link onClick={toggleHandler} to=""><div><span><MdOutlineContactMail/></span> <p>Contact</p></div></Link>
                     
@@ -108,7 +108,7 @@ export default function Layout({children}) {
                         <p>Website's components:</p>
                         <Link to="/home"><MdFiberManualRecord />Home</Link>
                         <Link to="#"><MdFiberManualRecord />About Me</Link>
-                        <Link to="#"><MdFiberManualRecord />Portfolio</Link>
+                        <Link to="/portfolio"><MdFiberManualRecord />Portfolio</Link>
                         <Link to="/blog"><MdFiberManualRecord />Blog</Link>
                         <Link to="#"><MdFiberManualRecord />Contact</Link>
                     </div>

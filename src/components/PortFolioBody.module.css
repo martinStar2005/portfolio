@@ -1,0 +1,169 @@
+.portFolioBody{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.portFolioBody > div {
+    width: calc(100% -30px);
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    border: 1px dashed silver;
+    border-radius: 7px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.portFolioBody > div img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.portFolioBody > div > div {
+    width: calc(100% - 40px - 300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.portFolioBody > div > span {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    background-color: silver;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.portFolioBody > div > div > h1 {
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.portFolioBody > div > div > p {
+    font-size: 1.2rem;
+    font-style: oblique;
+    margin-bottom: 60px;
+}
+
+.portFolioBody > div > div > span {
+    padding: 5px 8px;
+    background-color: violet;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 15px;
+    font-size: 1.1rem;
+}
+
+.portFolioBody > div > div > div {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.portFolioBody > div > div > div > p {
+    margin-bottom: 18px;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.portFolioBody > div > div > div > p > svg {
+    margin: 0 8px;
+}
+.portFolioBody > div > div > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.portFolioBody > div > div > div span {
+    width: fit-content;
+    margin-left: 10px;
+    border: 1px dashed silver;
+    height: 30px;
+    font-size: 1rem;
+    font-style: italic;
+    padding: 3px 7px;
+    text-align: center;
+    
+}
+
+@media (max-width: 860px) {
+    .portFolioBody > div > div > div > p {
+        font-size: 0.75rem;
+    }
+
+    .portFolioBody > div > div > div span{ 
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 750px) {
+    .portFolioBody > div {
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+    }
+    .portFolioBody > div > div {
+        width: 300px;
+    }
+    .portFolioBody > div > div > h1 {
+        margin-top: 20px;
+    }
+    .portFolioBody > div > div > span {
+        position: absolute;
+        top: 100%;
+        
+    }
+    .portFolioBody {
+        gap: 80px;
+    }
+}
+
+@media (max-width: 425px) {
+    .portFolioBody > div {
+        width: auto;
+    }
+
+    .portFolioBody > div > img {
+        width: 220px;
+    }
+
+    .portFolioBody > div > div {
+        width: 220px;
+    }
+    .portFolioBody > div > div > div span {
+        font-size: 0.5rem;
+        font-weight: 600;
+        text-align: center;
+        color: #000;
+        
+    }
+    .portFolioBody > div > div > div {
+        width: 150px;   
+    }
+    .portFolioBody > div > div > div > p {
+        font-size: 0.6rem;
+    }
+}

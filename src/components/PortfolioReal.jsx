@@ -1,6 +1,7 @@
 import { FaSmile } from "react-icons/fa"
 import styles from "./Portfolio.module.css"
 import Posts from "./Posts"
+import { Link } from "react-router-dom"
 
 export default function Portfolio() {
     return(
@@ -10,7 +11,9 @@ export default function Portfolio() {
                     Could you please take a look at my new projects?  
                     <FaSmile />
                 </h1>
-                <button>My Portfolio</button>
+                    <Link to="/portfolio">
+                        <button>My Portfolio</button>
+                    </Link>
             </div>
         </div>  
     )
