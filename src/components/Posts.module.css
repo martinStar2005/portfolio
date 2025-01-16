@@ -1,0 +1,130 @@
+.post {
+    width: 100%;
+    margin-top: 60px;
+    padding: 20px;
+    
+}
+
+.post >div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 20px;
+    width: calc(100% - 40px);
+    border: 1px dashed rgb(150, 150, 150);
+    border-radius: 5px;
+    margin: 0 auto;
+    
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.details h1 {
+    font-size: 2.2rem;
+    font-style: italic;
+
+}
+
+.details p {
+    width: 680px;
+    font-size: 1.5rem;
+    color: grey;
+    text-align: center;
+}
+
+.image {
+    display: flex;
+    gap: 50px;
+    padding: 15px ;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.image > div {
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(253, 252, 252);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.image > div:hover {
+    box-shadow: 0 4px 15px 5px rgba(169, 169, 169, 0.8);
+}
+
+.image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.image p {
+    margin: 40px 0 20px;
+    color: black;
+    font-size: 1.3rem;
+    width: 300px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+@media (max-width : 1120px) {
+    .image img, .image p, .image > div {
+        width: 250px;
+    }
+
+}
+
+@media (max-width : 952px) {
+    .image img, .image p, .image > div {
+        width: 200px;
+    }
+
+}
+
+@media (max-width : 800px) {
+    .image {
+        flex-direction: column;
+    }
+
+    .image img, .image p, .image > div {
+        width: 400px;
+    }
+
+    .details p {
+        width: 500px;
+    }
+}
+
+@media (max-width : 580px) {
+
+    .image img, .image p, .image > div {
+        width: 340px;
+    }
+
+    .details p {
+        width: 340px;
+    }
+}
+
+@media (max-width : 450px) {
+    .image img, .image p, .image > div {
+        width: 200px;
+    }
+
+    .details p {
+        width: auto;
+    }
+
+    .details h1 {
+        font-size: 1.4rem;
+        width: auto;
+    }
+}

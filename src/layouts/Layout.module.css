@@ -10,6 +10,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 .container .image img  {
@@ -144,6 +145,117 @@
     color: red;
 }
 
+.footer {
+    width: 100%;
+    padding: 20px 0 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > div {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMedia img {
+    width: 130px;
+}
+
+.socialMedia div {
+    margin-top: 35px;
+}
+
+.socialMedia div p {
+    color: grey;
+    width: 130px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.socialMedia > div > div {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socialMedia div button  {
+    background: none;
+    border: 1px dashed grey;
+    padding: 7px 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.socialMedia div button:hover {
+    background-color: #c9c9c9;
+}
+
+.socialMedia div button svg {
+    font-size: 1rem;
+    
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.component p {
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.component a {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    font-size: 1.2rem;
+    color: grey;
+    list-style-type: decimal-leading-zero;
+    transition: all 0.3s ease;
+}
+
+.component a:hover {
+    color: blue;
+}
+
+.component a svg {
+    margin-right: 10px;
+}
+
+.footer > p {
+    padding: 5px;
+    background-color: rgb(236, 232, 232);
+    color: #000;
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 @media (max-width: 930px) {
     .container {
         justify-content: space-between;
@@ -173,6 +285,11 @@
 
     .container {
         justify-content: space-around;
+    }
+
+    .footer > div {
+        flex-direction: column;
+        gap: 100px;
     }
 }
 

@@ -1,13 +1,16 @@
 import Banner from "./components/banner"
 import Layout from "./layouts/layout"
+import Animation from "./animations/Animation"
 
 function App() {
  
 
   return (
     <Layout>
-      <Banner />
-    </Layout>
+        <Animation>
+        <Banner />
+    </Animation>
+      </Layout>
   )
 }
 
